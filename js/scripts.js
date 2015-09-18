@@ -45,6 +45,6 @@ var numberToppings = $("input[name=topping]:checked").map(
 
   var pizzaPrice = newPizza.pizzaPrice();
 
-  $("#pizza-cost").text(pizzaPrice + "  " + "DOLLAS!")
+  $("#pizza-cost").text(pizzaPrice + "  " + "DOLLARS!")
   })
   })
