@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pizza</title>
+    <link rel="stylesheet" href="css/styles.css" media="screen">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet' type='text/css'>
+    </head>
+  <body>
+    <div class="container">
+      <section class="header">
+        <h2>Pizza Shop</h2>
+      </section>
+      <div class="row">
+        <div class="one-half column">
+          <h5>Create Your Pizza</h5>
+          <hr>
+          <form id="pizza-time">
+            <label for="pizza-size">What size pizza?</label>
+            <select id="pizza-size" class="u-full-width" required>
+              <option value="" disabled selected>Size</option>
+              <option value=7>Small</option>
+              <option value=10>Medium</option>
+              <option value=13>Large</option>
+              <option value=16>XtraLarge</option>
+            </select>
+            <br>
+
+            <input type="checkbox" name="topping" value=1> Bacon<br>
+            <input type="checkbox" name="topping" value=1> Eggs<br>
+            <input type="checkbox" name="topping" value=1> PEAS<br>
+            <input type="checkbox" name="topping" value=1> BROCCOLI<br>
+            <input type="checkbox" name="topping" value=1> HAM<br>
+            <input type="checkbox" name="topping" value=1> MANGOS<br>
+            <input type="checkbox" name="topping" value=1> BRAINS<br>
+
+
+            <label for="quantity">How many pizzas?</label>
+            <input type="number" id="quantity" min="1" max="120" required>
+
+            <button type="submit">Calculate Pizza Price</button>
+          </form>
+        </div>
+        <div class="one-half column final-pizza">
+          <h5>Your Pizza:</h5>
+          <hr>
+        </div>
+      </div>
+      <br>
+      <br>
+
+      </div>
+    </div>
+  </body>
+</html>
