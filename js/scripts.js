@@ -13,15 +13,16 @@ Pizza.prototype.pizzaPrice = function() {
   return pizzaPrice;
 }
 
-function numberToppings()
-{
-   alert($("input[name=topping]:checked").map(
-     function () {return this.value;}).get().eval.join("+"));
 
+function showSelectedValues()
+{
+  alert($("input[name=topping]:checked").map(
+     function () {return this.value;}).get().join(","));
 }
 
-var arr=[1,2,3,4];
-alert(eval(arr.join('+')));
+
+// var arr=[1,2,3,4];
+// alert(eval(arr.join('+')));
 
 $(document).ready(function(){
   $("form#pizza-time").submit(function(event) {
@@ -38,7 +39,7 @@ $(document).ready(function(){
 
   var pizzaPrice = newPizza.pizzaPrice();
 
-  numberToppings()
+  showSelectedValues()
 
   $(".final-pizza").append(
     pizzaPrice
