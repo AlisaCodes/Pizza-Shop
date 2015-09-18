@@ -4,3 +4,10 @@ html *
    color: #000 !important;
    font-family: 'Poiret One', cursive !important;
 }
+
+body {
+    background-image: url("cat.jpeg");
+    background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+}
