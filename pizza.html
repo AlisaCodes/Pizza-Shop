@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Pizza</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css" media="screen">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -14,26 +15,28 @@
       </section>
       <div class="row">
         <div class="one-half column">
-          <h5>Create Your Pizza</h5>
+          <h4>Create Your Pizza</h4>
           <hr>
           <form id="pizza-time">
             <label for="pizza-size">What size pizza?</label>
             <select id="pizza-size" class="u-full-width" required>
               <option value="" disabled selected>Size</option>
-              <option value=7>Small</option>
-              <option value=10>Medium</option>
-              <option value=13>Large</option>
-              <option value=16>XtraLarge</option>
+              <option value="7">Small</option>
+              <option value="10">Medium</option>
+              <option value="13">Large</option>
+              <option value="16">XtraLarge</option>
             </select>
             <br>
 
-            <input type="checkbox" name="topping" value=1> Bacon<br>
-            <input type="checkbox" name="topping" value=1> Eggs<br>
-            <input type="checkbox" name="topping" value=1> PEAS<br>
-            <input type="checkbox" name="topping" value=1> BROCCOLI<br>
-            <input type="checkbox" name="topping" value=1> HAM<br>
-            <input type="checkbox" name="topping" value=1> MANGOS<br>
-            <input type="checkbox" name="topping" value=1> BRAINS<br>
+            <label for="topping">Hey, pick toppings.</label>
+            <br>
+            <input type="checkbox" name="topping" value="1"> Bacon<br>
+            <input type="checkbox" name="topping" value="1"> Eggs<br>
+            <input type="checkbox" name="topping" value="1"> PEAS<br>
+            <input type="checkbox" name="topping" value="1"> BROCCOLI<br>
+            <input type="checkbox" name="topping" value="1"> HAM<br>
+            <input type="checkbox" name="topping" value="1"> MANGOS<br>
+            <input type="checkbox" name="topping" value="1"> BRAINS<br>
 
 
             <label for="quantity">How many pizzas?</label>
@@ -43,7 +46,9 @@
           </form>
         </div>
         <div class="one-half column final-pizza">
-          <h5>Your Pizza:</h5>
+
+
+          <h2><strong>Pizza Price:</strong> <span id="pizza-cost"></span></h2>
           <hr>
         </div>
       </div>

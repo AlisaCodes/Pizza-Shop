@@ -13,36 +13,38 @@ Pizza.prototype.pizzaPrice = function() {
   return pizzaPrice;
 }
 
-
-function showSelectedValues()
-{
-  alert($("input[name=topping]:checked").map(
-     function () {return this.value;}).get().join(","));
+function clear() {
+  $("select#pizza-size").val("");
+  $("input#quantity").val("");
 }
-
-
-// var arr=[1,2,3,4];
-// alert(eval(arr.join('+')));
 
 $(document).ready(function(){
   $("form#pizza-time").submit(function(event) {
     event.preventDefault();
 
     var inputtedSize = $("select#pizza-size option:selected").val();
-    var inputtedToppings = $()
-    var inputtedQuantity = $("select#quantity option:selected").val()
+    var inputtedQuantity = $("input#quantity").val();
+
+
+var numberToppings = $("input[name=topping]:checked").map(
+  function () {return this.value;}).get();
+
+  var totalToppings = 0;
+
+  numberToppings.forEach(function(value) {
+    totalToppings += parseInt(value);
+  });
+
+  totalToppings
+
 
   var newPizza = new Pizza;
-  newPizza.inches = inputtedSize;
-  newPizza.toppings = inputtedToppings;
-  newPizza.quantity = inputtedQuantity;
+  newPizza.inches = parseInt(inputtedSize);
+  newPizza.toppings = totalToppings;
+  newPizza.quantity = parseInt(inputtedQuantity);
 
   var pizzaPrice = newPizza.pizzaPrice();
 
-  showSelectedValues()
-
-  $(".final-pizza").append(
-    pizzaPrice
-  )
+  $("#pizza-cost").text(pizzaPrice + "  " + "DOLLAS!")
   })
-})
+  })
