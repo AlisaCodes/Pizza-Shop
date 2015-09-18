@@ -22,6 +22,7 @@ $(document).ready(function(){
   $("form#pizza-time").submit(function(event) {
     event.preventDefault();
 
+
     var inputtedSize = $("select#pizza-size option:selected").val();
     var inputtedQuantity = $("input#quantity").val();
 
